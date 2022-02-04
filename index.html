@@ -1,0 +1,488 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>How To Git</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/blood.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<img src="./img/hello-there-private-from-penguins-of-madagascar.gif" /> 
+					</section>
+
+					<section>
+						<img src="./img/austin-powers-introduction.gif" />
+					</section>
+
+					<section>
+						<img src="./img/frozen-olaf.gif" />
+					</section>
+
+					<section>
+						Introduction
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<pre>
+							<code>
+								git push origin master --force
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<img src="./img/explosion-boom.gif" />
+					</section>
+
+					<section>
+						<img src="./img/crazy-alert-crazy.gif" />
+					</section>
+
+					<section>		
+						<img src="./img/loki-seriously.gif" />
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Outline</h2>	
+					</section>
+
+					<section>
+						<h3>Basic Git Commands</h3>
+						<ul>
+							<li class="fragment">How to create a new repository</li>
+							<li class="fragment">Git structure</li>
+							<li class="fragment">How to check in file</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Branching</h3>
+						<ul>
+							<li class="fragment">What is branching</li>
+							<li class="fragment">How to create a branch</li>
+							<li class="fragment">How to list all local branches</li>
+							<li class="fragment">How to switch branch</li>
+							<li class="fragment">How to delete a branch</li>
+						</ul>
+					</section>	
+
+					<section>
+						<h3>Git Remote Commands</h3>
+						<ul>
+							<li class="fragment">How to clone a project</li>
+							<li class="fragment">How to pull changes</li>
+							<li class="fragment">How to push changes</li>
+							<li class="fragment">How to make a pull request</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Git Basics</h2>
+					</section>
+
+					<section>
+						<h3>What is git?</h3>
+					</section>
+
+					<section>
+						<img src="./img/git-structure.png" />
+					</section>
+				</section>
+
+				<section>
+					<img src="./img/cat-typing.gif" />
+				</section>
+
+				<section>
+					<h3>Initialise a git folder</h3>
+					<pre>
+						<code>
+							git init
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Configure git user name and email</h3>
+					<pre>
+						<code>
+							git config --global user.name "Zendy Wongso"
+							git config --global user.email "zwongso@seek.com.au"
+						</code>
+					</pre>
+				</section>
+				
+				<section>
+					<h3>Check the current status of our working tree</h3>
+					<pre>
+						<code>git status</code>
+					</pre>
+				</section>
+
+				<section>
+					<section>
+						<h3>Add a file to working tree</h3>
+					</section>
+
+					<section>
+						<h3>Let's create a new file</h3>
+						<pre>
+							<code>
+								{
+									detail: {
+										name: '',
+										age: '',
+									},
+									location: {
+										city: 'Melbourne',
+									},
+									job: {
+										company: 'SEEK',
+										office: 'Melbourne'
+									}
+								}
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<pre>
+							<code>
+								git add .
+								git add filename
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>Commit our changes to Staging Area</h3>
+					<pre>
+						<code>
+							git commit -m "First commit"
+							git commit
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<section>
+						<h3>Compare the diff with staging</h3>
+					</section>
+
+					<section>
+						<h3>Let's update our file</h3>
+						<pre>
+							<code>
+								{
+									detail: {
+										...
+										gender: ''
+									},
+									location: {
+										city: ''
+										postcode: ''
+									},
+									job: {
+										...
+									}
+								}
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<pre>
+							<code>
+								git diff
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Compare the diff with history</h3>
+					</section>
+
+					<section>
+						<h3>Let's update our file</h3>
+						<pre>
+							<code>
+								{
+									detail: {
+										...
+									},
+									location: {
+										...
+									},
+									job: {
+										...
+										office: 'Cremorne'
+									}
+								}
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Let's create a new file</h3>
+						<pre>
+							<code>
+								{
+									hobby: ''
+								}
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<pre>
+							<code>
+								git diff --staged
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>Looking at our log</h3>
+					<pre>
+						<code>
+							git log
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Unstage a file from staging area</h3>
+					<pre>
+						<code>
+							git restore --staged filename
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Branching</h2>
+					</section>
+
+					<section>
+						<h3>What is a branch?</h3>
+					</section>
+
+					<section>
+						<img src="./img/git-branch.png" />
+					</section>
+				</section>
+
+				<section>
+					<h3>Create a new branch</h3>
+					<pre>
+						<code>
+							git branch branchName
+							git checkout -b branchName
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Show all local branches</h3>
+					<pre>
+						<code>
+							git branch
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Switch branch</h3>
+					<pre>
+						<code>
+							git switch branchName
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Merging branch</h3>
+					<pre>
+						<code>
+							git merge branchNameToBeMerged
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Delete a branch</h3>
+					<pre>
+						<code>
+							git branch -d branchName
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>Git Remote</h2>
+					<ul>
+						<li class="fragment"><a href="https://github.com/" target="_blank">GitHub</a></li>
+						<li class="fragment"><a href="https://about.gitlab.com/" target="_blank">GitLab</a></li>
+						<li class="fragment"><a href="https://bitbucket.org/product" target="_blank">Bitbucket</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Clone a repository</h3>
+					<pre>
+						<code>
+							git clone git@github.com:org-name/repo-name.git
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Pushing to remote</h3>
+					<pre>
+						<code>
+							git push origin master
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<section>
+						<h3>Pulling from remote</h3>
+					</section>
+					
+					<section>
+						<h3>Fetching</h3>
+						<pre>
+							<code>
+								git fetch
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Pulling</h3>
+						<pre>
+							<code>
+								git pull
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Other Useful Things</h2>
+					</section>
+
+					<section>
+						<pre>
+							<code>.gitignore</code>
+						</pre>
+					</section>
+
+					<section>
+						<pre>
+							<code>git stash</code>
+						</pre>
+					</section>
+
+					<section>
+						<pre>
+							<code>git rm fileName</code>
+						</pre>
+					</section>
+
+					<section>
+						<pre>
+							<code>git add remote</code>
+						</pre>
+					</section>
+
+
+				</section>
+
+				<section>
+					<section>
+						<img src="./img/baby-yoda.gif" />
+					</section>
+
+					<section>
+						<h2>Git GUI</h2>
+						<ul>
+							<li><a target="_blank" href="https://www.git-tower.com/mac">Tower</a></li>
+							<li><a target="_blank" href="https://www.gitkraken.com/">GitKraken</a></li>
+							<li><a target="_blank" href="https://desktop.github.com/">Github Desktop</a></li>
+							<li><a target="_blank" href="https://www.sourcetreeapp.com/">Sourcetree</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Further Readings</h2>
+					<ul>
+						<li><a target="_blank" href="https://git-scm.com/book/en/v2">Pro Git</a></li>
+						<li><a target="_blank" href="https://marklodato.github.io/visual-git-guide/index-en.html">Visual git reference</a></li>
+						<li><a target="_blank" href="http://think-like-a-git.net/">Think like a git</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/watch?v=uR6G2v_WsRA">Introduction to Git YouTube video</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Seek's Github Org</h2>
+				</section>
+
+				<section>
+					<h2>Codeowners</h2>
+				</section>
+
+				<section>
+					<h2>
+						Branch Protections
+					</h2>
+				</section>
+
+				<section>
+					<img src="./img/mic-drop-minions.gif" />
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
